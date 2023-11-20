@@ -1,0 +1,334 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "FHIR Facade API for HealthPartners Base Claims Model",
+    "version": "1.0.0",
+    "title": "Base Claims API"
+  },
+  "paths": {
+    "/claims": {
+      "get": {
+        "tags": [
+          "base-claim-endpoints"
+        ],
+        "summary": "Returns all claims.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Results not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/claims/identifier/{identifier}": {
+      "get": {
+        "tags": [
+          "base-claim-endpoints"
+        ],
+        "summary": "Retrieves all records associated with a claim number.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Results not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "description": "Claim number for each record.",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/claims/service-date/{service-date}": {
+      "get": {
+        "tags": [
+          "base-claim-endpoints"
+        ],
+        "summary": "Returns all base claims associated with the relevant service date.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Results not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "service-date",
+            "in": "path",
+            "description": "Service date for each associated claim.",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/claims/search": {
+      "get": {
+        "tags": [
+          "base-claim-endpoints"
+        ],
+        "summary": "Endpoint for chaining search parameters.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Results not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "created",
+            "in": "query",
+            "description": "Created date for the associated claim.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "identifier.value",
+            "in": "query",
+            "description": "Internal claim number.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "item.servicedDate",
+            "in": "query",
+            "description": "Serviced date for specified item sequence.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "meta.lastUpdated",
+            "in": "query",
+            "description": "Last updated date for the base claim FHIR schema.",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/claims/{unique-id}": {
+      "get": {
+        "tags": [
+          "base-claim-system-detail-endpoints"
+        ],
+        "summary": "Returns a single base claim from a unique system identification string.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Results not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "unique-id",
+            "in": "path",
+            "description": "Unique id for each associated claim.",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/claims/created-date/{created-date}": {
+      "get": {
+        "tags": [
+          "base-claim-system-detail-endpoints"
+        ],
+        "summary": "Filters all base claims data based on the created date.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Results not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "created-date",
+            "in": "path",
+            "description": "Created date for each associated claim.",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "identifier": {
+        "properties": {
+          "identifier": {
+            "type": "string"
+          }
+        }
+      },
+      "service-date": {
+        "properties": {
+          "service-date": {
+            "type": "string"
+          }
+        }
+      },
+      "created-date": {
+        "properties": {
+          "created-date": {
+            "type": "string"
+          }
+        }
+      },
+      "unique-id": {
+        "properties": {
+          "unique-id": {
+            "type": "string"
+          }
+        }
+      },
+      "search": {
+        "properties": {
+          "created": {
+            "type": "string"
+          },
+          "identifier.value": {
+            "type": "string"
+          },
+          "item.servicedDate": {
+            "type": "string"
+          },
+          "meta.lastUpdated": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

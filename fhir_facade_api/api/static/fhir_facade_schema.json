@@ -1,0 +1,175 @@
+{
+  "resourceType": "",
+  "id": "",
+  "text": {
+    "status": "",
+    "div": ""
+  },
+  "identifier": [
+    {
+      "system": "",
+      "value": ""
+    }
+  ],
+  "status": "",
+  "type": {
+    "coding": [
+      {
+        "system": "",
+        "code": ""
+      }
+    ]
+  },
+  "subType": {
+    "coding": [
+      {
+        "system": "",
+        "code": ""
+      }
+    ]
+  },
+  "use": "",
+  "patient": {
+    "reference": ""
+  },
+  "created": "",
+  "enterer": {
+    "identifier": {
+      "system": "",
+      "value": ""
+    }
+  },
+  "insurer": {
+    "reference": ""
+  },
+  "provider": {
+    "reference": ""
+  },
+  "priority": {
+    "coding": [
+      {
+        "system": "",
+        "code": ""
+      }
+    ]
+  },
+  "payee": {
+    "type": {
+      "coding": [
+        {
+          "system": "",
+          "code": ""
+        }
+      ]
+    }
+  },
+  "facility": {
+    "identifier": {
+      "system": "",
+      "value": ""
+    }
+  },
+  "careTeam": [
+    {
+      "sequence": 1,
+      "provider": {
+        "reference": ""
+      }
+    }
+  ],
+  "diagnosis": [
+    {
+      "sequence": 1,
+      "diagnosisCodeableConcept": {
+        "coding": [
+          {
+            "system": "",
+            "code": ""
+          }
+        ]
+      }
+    }
+  ],
+  "procedure": [
+    {
+      "sequence": 1,
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "",
+              "code": ""
+            }
+          ]
+        }
+      ],
+      "date": "",
+      "procedureCodeableConcept": {
+        "coding": [
+          {
+            "system": "",
+            "code": ""
+          }
+        ],
+        "text": ""
+      },
+      "udi": [
+        {
+          "reference": "D"
+        }
+      ]
+    }
+  ],
+  "insurance": [
+    {
+      "sequence": 1,
+      "focal": true,
+      "coverage": {
+        "reference": "C"
+      }
+    }
+  ],
+  "item": [
+    {
+      "sequence": 1,
+      "careTeamSequence": [],
+      "productOrService": {
+        "coding": [
+          {
+            "system": "",
+            "code": ""
+          }
+        ]
+      },
+      "servicedDate": "",
+      "unitPrice": {
+        "value": 0,
+        "currency": ""
+      },
+      "net": {
+        "value": 0,
+        "currency": ""
+      },
+      "encounter": [
+        {
+          "reference": ""
+        }
+      ]
+    }
+  ],
+  "total": {
+    "value": 0,
+    "currency": ""
+  },
+  "meta": {
+    "versionId": "",
+    "lastUpdated": "",
+    "tag": [
+      {
+        "system": "",
+        "code": "",
+        "display": ""
+      }
+    ]
+  }
+}
