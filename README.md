@@ -2,7 +2,7 @@
 
 ## description
 
-A repository featuring a healthcare data project focused on creating an API endpoint to serve data to HealthPartners third-party vendors.
+A repository featuring a healthcare data project focused on creating an API endpoint to serve data to HealthPartners' third-party vendors.
 
 ## project
 
